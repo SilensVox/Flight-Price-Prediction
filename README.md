@@ -17,14 +17,15 @@ A comprehensive data science project for predicting flight ticket prices using e
 
 ## 🎯 Overview
 
-This project aims to predict flight ticket prices based on various factors such as airline, route, travel class, duration, booking time, and number of stops. The project includes extensive exploratory data analysis (EDA), outlier detection and treatment, feature engineering, and preparation for machine learning model development.
+This project aims to predict flight ticket prices based on various factors such as airline, route, travel class, duration, booking time, and number of stops. The project includes extensive exploratory data analysis (EDA), outlier detection and treatment, feature engineering, machine learning model training, and comparative evaluation.
 
 ### Key Objectives:
 - Understand the factors affecting flight prices
 - Perform comprehensive exploratory data analysis
 - Handle outliers and ensure data quality
 - Engineer relevant features for better predictions
-- Prepare clean datasets for machine learning models
+- Train and compare multiple regression models
+- Save the best model and preprocessing pipeline for reuse
 
 ## ✨ Features
 
@@ -38,6 +39,8 @@ The analysis covers multiple aspects of flight pricing:
 6. **Booking Time Analysis** - Optimal booking window identification
 7. **Time-based Analysis** - Departure and arrival time effects
 8. **Multivariate Analysis** - Complex interactions between features
+9. **Model Benchmarking** - Comparative evaluation of regression models
+10. **Model Persistence** - Saved model and preprocessing bundle for deployment
 
 ## 📊 Dataset
 
@@ -77,6 +80,10 @@ project-datascience/
 ├── Outlier_Before_After_Summary.csv      # Outlier analysis summary
 ├── Outlier_Detection_Report.csv          # Detailed outlier report
 ├── project_comprehensive_eda.ipynb       # Main Jupyter notebook with complete analysis
+├── model_training_results/
+│   ├── best_model.pkl                     # Best-performing trained model
+│   ├── preprocessing_bundle.pkl           # Saved preprocessing objects
+│   └── model_results.csv                  # Training and test metrics across models
 │
 └── Flight price prediiction/             # Virtual environment
     ├── Scripts/                          # Python executable and packages
@@ -152,7 +159,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the dataset
-df = pd.read_csv("Clean_Dataset.csv")
+df = pd.read_csv("Clean_Dataset.CSV")
 
 # Display basic information
 print(df.info())
@@ -204,6 +211,16 @@ print(df.isnull().sum())
 - Prepared for dimensionality reduction if needed
 - Reserved for model optimization phase
 
+### 7. Model Training and Evaluation
+- Trained and compared 4 regression models:
+   - Random Forest
+   - Gradient Boosting
+   - Ridge Regression
+   - Linear Regression
+- Evaluated using R², RMSE, MAE, MAPE, and Accuracy within 10%
+- Ranked models by generalization performance on held-out test data
+- Saved best model and preprocessing artifacts for downstream use
+
 ## 🛠️ Technologies Used
 
 ### Programming & Tools:
@@ -248,15 +265,35 @@ print(df.isnull().sum())
    - Clean data with no missing values
    - Outliers properly handled
    - Features engineered for better predictive power
-   - Ready for machine learning model development
+   - Successfully used for model training and comparison
 
-### Model Readiness:
+### Model Performance Summary
+
+Based on `model_training_results/model_results.csv`:
+
+| Model | Test R² | Test RMSE | Test MAE | Test MAPE | Accuracy Within 10% |
+|-------|---------|-----------|----------|-----------|----------------------|
+| Random Forest | 0.9888 | 2397.93 | 923.21 | 6.24% | 81.08% |
+| Gradient Boosting | 0.9573 | 4689.50 | 2782.01 | 20.43% | 37.41% |
+| Ridge Regression | 0.9073 | 6911.65 | 4536.78 | 44.63% | 24.04% |
+| Linear Regression | 0.9073 | 6911.65 | 4536.78 | 44.63% | 24.04% |
+
+### Best Model
+- **Selected Model**: Random Forest
+- **Why it was selected**: Highest test R², lowest test errors, and strongest within-10% prediction accuracy
+
+### Saved Artifacts
+- `model_training_results/best_model.pkl`
+- `model_training_results/preprocessing_bundle.pkl`
+- `model_training_results/model_results.csv`
+
+### Project Status:
 ✅ Data cleaned and preprocessed  
 ✅ Outliers detected and treated  
 ✅ Features engineered and encoded  
 ✅ Train-test split completed  
-✅ Correlation analysis performed  
-✅ **Ready for Machine Learning Model Development!**
+✅ Multiple models trained and evaluated  
+✅ Best model and preprocessing pipeline saved
 
 ## 🤝 Contributing
 
