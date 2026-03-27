@@ -1,8 +1,8 @@
-# ✈️ Flight Price Prediction
+# Flight Price Prediction
 
 A comprehensive data science project for predicting flight ticket prices using exploratory data analysis (EDA), feature engineering, and machine learning techniques.
 
-## 📋 Table of Contents
+## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
 - [Dataset](#dataset)
@@ -15,7 +15,7 @@ A comprehensive data science project for predicting flight ticket prices using e
 - [Contributing](#contributing)
 - [License](#license)
 
-## 🎯 Overview
+## Overview
 
 This project aims to predict flight ticket prices based on various factors such as airline, route, travel class, duration, booking time, and number of stops. The project includes extensive exploratory data analysis (EDA), outlier detection and treatment, feature engineering, machine learning model training, and comparative evaluation.
 
@@ -27,9 +27,9 @@ This project aims to predict flight ticket prices based on various factors such 
 - Train and compare multiple regression models
 - Save the best model and preprocessing pipeline for reuse
 
-## ✨ Features
+## Features
 
-The analysis covers multiple aspects of flight pricing:
+The analysis covers multiple aspects of flight pricing to build a comprehensive understanding of price determination:
 
 1. **Airline Analysis** - Price variations across different airlines
 2. **Route Analysis** - Source and destination impact on pricing
@@ -42,9 +42,9 @@ The analysis covers multiple aspects of flight pricing:
 9. **Model Benchmarking** - Comparative evaluation of regression models
 10. **Model Persistence** - Saved model and preprocessing bundle for deployment
 
-## 📊 Dataset
+## Dataset
 
-The dataset contains flight booking information with the following features:
+The dataset contains flight booking information with the following structure:
 
 ### Categorical Features:
 - **airline** - Name of the airline
@@ -68,7 +68,7 @@ The dataset contains flight booking information with the following features:
 - **Missing Values**: None
 - **Data Quality**: Clean after preprocessing
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 project-datascience/
@@ -91,7 +91,7 @@ project-datascience/
     └── Include/                          # Header files
 ```
 
-## 🚀 Installation
+## Installation
 
 ### Prerequisites
 - Python 3.8 or higher
@@ -132,7 +132,7 @@ scikit-learn>=1.3.0
 jupyter>=1.0.0
 ```
 
-## 💻 Usage
+## Usage
 
 ### Running the Analysis
 
@@ -169,13 +169,13 @@ print(df.describe())
 print(df.isnull().sum())
 ```
 
-## 📈 Analysis Highlights
+## Analysis Highlights
 
 ### 1. Data Preparation
-- ✅ No missing values detected
-- ✅ Duplicate records removed
-- ✅ Feature types properly classified
-- ✅ Train-test split (80-20) implemented
+- No missing values detected
+- Duplicate records removed
+- Feature types properly classified
+- Train-test split (80-20) implemented
 
 ### 2. Exploratory Data Analysis
 - **Price Distribution**: Right-skewed with outliers identified
@@ -221,7 +221,7 @@ print(df.isnull().sum())
 - Ranked models by generalization performance on held-out test data
 - Saved best model and preprocessing artifacts for downstream use
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 ### Programming & Tools:
 - **Python 3.x** - Core programming language
@@ -239,7 +239,7 @@ print(df.isnull().sum())
 - **Scikit-learn** - ML algorithms and preprocessing
 - **SciPy** - Statistical analysis
 
-## 📊 Results
+## Results
 
 ### Key Findings:
 
@@ -288,14 +288,14 @@ Based on `model_training_results/model_results.csv`:
 - `model_training_results/model_results.csv`
 
 ### Project Status:
-✅ Data cleaned and preprocessed  
-✅ Outliers detected and treated  
-✅ Features engineered and encoded  
-✅ Train-test split completed  
-✅ Multiple models trained and evaluated  
-✅ Best model and preprocessing pipeline saved
+Completed: Data cleaned and preprocessed  
+Completed: Outliers detected and treated  
+Completed: Features engineered and encoded  
+Completed: Train-test split completed  
+Completed: Multiple models trained and evaluated  
+Completed: Best model and preprocessing pipeline saved
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Here's how you can help:
 
@@ -305,33 +305,19 @@ Contributions are welcome! Here's how you can help:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-### Areas for Contribution:
-- Machine learning model implementation (Random Forest, XGBoost, etc.)
-- Hyperparameter tuning and optimization
-- Feature engineering improvements
-- Additional visualizations
-- Model deployment pipeline
-- Web application interface
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👤 Author
+## Author
 
 **SilensVox**
 - GitHub: [@SilensVox](https://github.com/SilensVox)
 - Repository: [Flight-Price-Prediction](https://github.com/SilensVox/Flight-Price-Prediction)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-- Dataset sourced from flight booking platforms
-- Inspired by real-world pricing optimization challenges
+- Dataset sourced from Kaggle
 - Thanks to the open-source community for amazing tools and libraries
 
-
-
-**⭐ If you find this project helpful, please consider giving it a star!**
+If you find this project helpful, please consider giving it a star!
 
 ---
 
